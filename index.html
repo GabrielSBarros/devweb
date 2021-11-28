@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Devweb</title>
+</head>
+<body>
+  <header>
+    <img src="https://www.prescriptum.com.br/wp-content/uploads/2015/12/placeholder-usuario-500x500.jpg"/>
+    <div class="info">
+      <p>Nome:</p>
+      <p>{Nome}</p>
+    </div>
+    <div class="info">
+      <p>Classe:</p>
+      <p>Druida</p>
+    </div>
+    <div class="info">
+      <p>Nível:</p>
+      <p>3</p>
+    </div>
+  </header>
+  <hr/>
+  <main>
+    <section class="spaces-section">
+      <h3>Espaços de magia</h3>
+
+      <div class="spaces-list">
+        <h4>Espaços de nível 1</h4>
+        <div class="spaces-container">
+          <div class="spell-space"></div>
+          <div class="spell-space"></div>
+          <div class="spell-space"></div>
+          <div class="spell-space"></div>
+        </div>
+      </div>
+
+      <div class="spaces-list selected">
+        <h4>Espaços de nível 2</h4>
+        <div class="spaces-container">
+          <div class="spell-space"></div>
+          <div class="spell-space"></div>
+          <div class="spell-space used-space"></div>
+        </div>
+      </div>
+
+      <div class="spaces-list">
+        <h4>Espaços de nível 3</h4>
+        <div class="spaces-container">
+          <div class="spell-space used-space"></div>
+          <div class="spell-space used-space"></div>
+          <div class="spell-space used-space"></div>
+        </div>
+      </div>
+
+      <div class="spaces-list">
+        <h4>Espaços de nível 4</h4>
+        <div class="spaces-container">
+          <div class="spell-space used-space"></div>
+          <div class="spell-space used-space"></div>
+          <div class="spell-space used-space"></div>
+        </div>
+      </div>
+
+      <div class="spaces-list">
+        <h4>Espaços de nível 5</h4>
+        <div class="spaces-container">
+          <div class="spell-space used-space"></div>
+          <div class="spell-space used-space"></div>
+          <div class="spell-space used-space"></div>
+        </div>
+      </div>
+
+      <div class="spaces-list">
+        <h4>Espaços de nível 6</h4>
+        <div class="spaces-container">
+          <div class="spell-space used-space"></div>
+          <div class="spell-space used-space"></div>
+        </div>
+      </div>
+
+      <div class="spaces-list">
+        <h4>Espaços de nível 7</h4>
+        <div class="spaces-container">
+          <div class="spell-space used-space"></div>
+          <div class="spell-space used-space"></div>
+        </div>
+      </div>
+
+      <div class="spaces-list">
+        <h4>Espaços de nível 8</h4>
+        <div class="spaces-container">
+          <div class="spell-space used-space"></div>
+        </div>
+      </div>
+
+      <div class="spaces-list">
+        <h4>Espaços de nível 9</h4>
+        <div class="spaces-container">
+          <div class="spell-space used-space"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="spell-list">
+      <div class="spell">
+        <div class="spell-name">
+          <h3>Nv. 2: Visão no escuro</h3>
+          <button>Conjurar</button>
+        </div>
+        <p><b>Efeito:</b>Visão no escuro por 18 metros</p>
+        <p><b>Alcance:</b> Toque</p>
+        <p><b>Duração:</b> 8 horas</p>
+      </div>
+
+      <div class="spell selected">
+        <div class="spell-name">
+          <h3>Nv. 1: Curar Feridas <b style="color: red">Potencializada</b></h3>
+          <button>Conjurar</button>
+        </div>
+        <p><b>Efeito:</b> <b style="color: green" >Cura</b> <b>2d8</b> + seu modificador de feitiços</p>
+        <p><b>Alcance:</b> Toque</p>
+        <p>
+          <b>Descrição:</b>Uma criatura que vocẽ toque recupera um número de pontos de 
+          vida igual a <b>1d8</b> + seu modificador de feitiços.
+          Este Feitiço não tem efeito em mortos vivos ou constructos
+        </p>
+        <p><b>Em níveis maiores:</b> Quando é conjurada usando um espaço de magia de 2° nível ou superior a cura é aumentada em 1d8 para cada nível de espaço acima do 1</p>
+      </div>
+    </section>
+  </main>
+</body>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    max-width: 1440px;
+    margin: auto;
+    padding: 8px 24px;
+  }
+
+  header {
+    display: flex;
+    margin-bottom: 8px;
+  }
+
+  img {
+    height: 70px;
+    margin-right: 16px;
+  }
+
+  .info {
+    margin-right: 16px;
+  }
+
+  .info  p {
+      margin-top: 8px;
+    }
+
+  main {
+    display: flex;
+    margin-top: 8px;
+  }
+
+  .spaces-container {
+    display: flex;
+  }
+
+  .spell-space {
+    border-radius: 50%;
+    
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+
+    background-color: #f1c40f;
+  }
+
+  .used-space {
+    background-color: #34495e;
+  }
+
+  .selected {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .spaces-list {
+    width: 250px;
+    padding: 8px;
+  }
+
+  .spell-list {
+    margin-left: 16px;
+  }
+  
+  .spell {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+  }
+
+
+  .spell-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  button {
+    height: 30px;
+    width: 80px
+  }
+
+</style>
+</html>
